@@ -110,6 +110,20 @@ Tracing session: 066ec300-1430-11eb-90a4-3f16f6cb70ae
 
 
 ### Insert a reservation
+insert into reservations_by_restaraunt (restaraunt_id, user_id, restaraunt_name, restaraunt_address, reservation_id, booking_date, food_type, time_slot) values (20000100, 007, 'InInOut', '39 boardman', 009, '2020-06-05', 'pizza', '20:15:00');
+
+Tracing session: 71940220-1495-11eb-90a4-3f16f6cb70ae
+
+ activity                                                                                                                                                                                                                                                                                 | timestamp                  | source    | source_elapsed | client
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------+-----------+----------------+-----------
+                                                                                                                                                                                                                                                                       Execute CQL3 query | 2020-10-22 11:36:05.316000 | 127.0.0.1 |              0 | 127.0.0.1
+ Parsing insert into reservations_by_restaraunt (restaraunt_id, user_id, restaraunt_name, restaraunt_address, reservation_id, booking_date, food_type, time_slot) values (20000100, 007, 'InInOut', '39 boardman', 009, '2020-06-05', 'pizza', '20:15:00'); [Native-Transport-Requests-1] | 2020-10-22 11:36:05.317000 | 127.0.0.1 |            641 | 127.0.0.1
+                                                                                                                                                                                                                                        Preparing statement [Native-Transport-Requests-1] | 2020-10-22 11:36:05.317000 | 127.0.0.1 |           1541 | 127.0.0.1
+                                                                                                                                                                                                                          Determining replicas for mutation [Native-Transport-Requests-1] | 2020-10-22 11:36:10.524000 | 127.0.0.1 |        5208152 | 127.0.0.1
+                                                                                                                                                                                                                                                 Appending to commitlog [MutationStage-2] | 2020-10-22 11:36:10.541000 | 127.0.0.1 |        5225445 | 127.0.0.1
+                                                                                                                                                                                                                          Adding to reservations_by_restaraunt memtable [MutationStage-2] | 2020-10-22 11:36:10.543000 | 127.0.0.1 |        5227135 | 127.0.0.1
+                                                                                                                                                                                                                                                                         Request complete | 2020-10-22 11:36:10.576277 | 127.0.0.1 |        5260277 | 127.0.0.1
+
 
 
 
